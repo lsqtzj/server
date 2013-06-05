@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2005-2012 MaNGOS project <http://getmangos.com/>
+# This code is part of MaNGOS. Contributor & Copyright details are in AUTHORS/THANKS.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,11 +16,11 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
 
-project(MaNGOS)
-set(MANGOS_VERSION 0.17.0)
-
 # CMake policies
 cmake_minimum_required(VERSION 2.8)
+
+project(MaNGOS)
+set(MANGOS_VERSION 0.18)
 
 set(CMAKE_MODULE_PATH
   ${CMAKE_MODULE_PATH}
