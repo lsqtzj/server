@@ -1,4 +1,4 @@
-/**
+/*
   @file Quat.h
  
   Quaternion
@@ -20,7 +20,7 @@
 
 namespace G3D {
 
-/**
+/*
   Unit quaternions are used in computer graphics to represent
   rotation about an axis.  Any 3x3 rotation matrix can
   be stored as a quaternion.
@@ -54,7 +54,7 @@ private:
 
 public:
 
-    /**
+    /*
      q = [sin(angle / 2) * axis, cos(angle / 2)]
     
      In Watt & Watt's notation, s = w, v = (x, y, z)
@@ -62,7 +62,7 @@ public:
      */
     float x, y, z, w;
 
-    /**
+    /*
      Initializes to a zero degree rotation.
      */
     inline Quat() : x(0), y(0), z(0), w(1) {}
@@ -77,7 +77,7 @@ public:
     inline Quat(const Vector3& v, float _w = 0) : x(v.x), y(v.y), z(v.z), w(_w) {
     }
 
-    /**
+    /*
      The real part of the quaternion.
      */
     inline const float& real() const {
@@ -104,7 +104,7 @@ public:
 		return Quat(-x, -y, -z, -w);
 	}
 
-    /**
+    /*
      Returns the imaginary part (x, y, z)
      */
     inline const Vector3& imag() const {
@@ -139,7 +139,7 @@ public:
     void toRotationMatrix(
         Matrix3&            rot) const;
     
-    /**
+    /*
      Spherical linear interpolation: linear interpolation along the 
      shortest (3D) great-circle route between two quaternions.
 
@@ -158,7 +158,7 @@ public:
 	/** Normalized linear interpolation of quaternion components. */
 	Quat nlerp(const Quat& other, float alpha) const;
 
-    /**
+    /*
      Negates the imaginary part.
      */
     inline Quat conj() const {
@@ -206,7 +206,7 @@ public:
 
     Quat operator+(const Quat& other) const;
 
-    /**
+    /*
      Quaternion multiplication (composition of rotations).
      Note that this does not commute.
      */
@@ -277,7 +277,7 @@ public:
     }
 
 
-    /**
+    /*
      Raise this quaternion to a power.  For a rotation, this is
      the effect of rotating x times as much as the original
      quaterion.
@@ -296,7 +296,7 @@ public:
         }
     }
 
-    /**
+    /*
      Returns a unit quaterion obtained by dividing through by
      the magnitude.
      */
@@ -306,7 +306,7 @@ public:
         return x;
     }
 
-    /**
+    /*
      The linear algebra 2-norm, sqrt(q dot q).  This matches
      the value used in Dam's 1998 tech report but differs from the
      n(q) value used in Eberly's 1999 paper, which is the square of the

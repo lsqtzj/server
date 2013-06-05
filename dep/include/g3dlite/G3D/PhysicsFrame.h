@@ -1,4 +1,4 @@
-/**
+/*
  @file PhysicsFrame.h
 
  @maintainer Morgan McGuire, http://graphics.cs.williams.edu
@@ -21,7 +21,7 @@
 
 namespace G3D {
 
-/**
+/*
   An RT transformation using a quaternion; suitable for
   physics integration.
 
@@ -32,17 +32,17 @@ public:
 
     Quat    rotation;
 
-    /**
+    /*
      Takes object space points to world space.
      */
     Vector3 translation;
 
-    /**
+    /*
      Initializes to the identity frame.
      */
     PhysicsFrame();
 
-    /**
+    /*
      Purely translational force
      */
     PhysicsFrame(const Vector3& translation) : translation(translation) {}
@@ -56,7 +56,7 @@ public:
 
     CoordinateFrame toCoordinateFrame() const;
 
-    /**
+    /*
      Linear interpolation (spherical linear for the rotations).
      */
     PhysicsFrame lerp(

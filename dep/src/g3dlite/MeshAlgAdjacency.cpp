@@ -1,4 +1,4 @@
-/**
+/*
   @file MeshAlgAdjacency.cpp
 
   @maintainer Morgan McGuire, http://graphics.cs.williams.edu
@@ -51,7 +51,7 @@ public:
         table.resize(maxV);
     }
 
-    /**
+    /*
      Inserts the faceIndex into the edge's face list.
      The index may be a negative number indicating a backface.
 
@@ -137,7 +137,7 @@ public:
 };
 
 
-/**
+/*
  Assigns the edge index into the next unassigned edge
  index.  The edge index may be negative, indicating
  a reverse edge.

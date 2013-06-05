@@ -1,4 +1,4 @@
-/**
+/*
  @file platform.h
 
  \#defines for platform specific issues.
@@ -12,7 +12,7 @@
 #ifndef G3D_platform_h
 #define G3D_platform_h
 
-/**
+/*
  The version number of G3D in the form: MmmBB ->
  version M.mm [beta BB]
  */
@@ -285,7 +285,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int sw) {\
 #endif
 
 
-/**
+/*
   @def STR(expression)
 
   Creates a string from the expression.  Frequently used with G3D::Shader

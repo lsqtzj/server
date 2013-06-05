@@ -18,7 +18,7 @@
 
 namespace G3D {
 
-/**
+/*
  Represents a Color3 as a packed integer.  Convenient
  for creating unsigned int vertex arrays.  Used by
  G3D::GImage as the underlying format.
@@ -65,7 +65,7 @@ public:
         return Color3uint8(b, g, r);
     }
 
-    /**
+    /*
      Returns the color packed into a uint32
      (the upper byte is 0xFF)
      */

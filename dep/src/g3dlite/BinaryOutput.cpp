@@ -1,4 +1,4 @@
-/**
+/*
  @file BinaryOutput.cpp
  
  @author Morgan McGuire, graphics3d.com

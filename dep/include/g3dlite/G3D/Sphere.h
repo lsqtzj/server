@@ -1,4 +1,4 @@
-/**
+/*
  @file Sphere.h
  
  Sphere class
@@ -19,7 +19,7 @@
 
 namespace G3D {
 
-/**
+/*
  Sphere.
  */
 class Sphere {
@@ -58,7 +58,7 @@ public:
         return !((center == other.center) && (radius == other.radius));
     }
 
-    /**
+    /*
      Returns true if point is less than or equal to radius away from
      the center.
      */
@@ -66,7 +66,7 @@ public:
 
     bool contains(const Sphere& other) const;
 
-    /**
+    /*
        @deprecated Use culledBy(Array<Plane>&)
      */
     bool culledBy(
@@ -76,7 +76,7 @@ public:
                   const uint32        testMask,
                   uint32&             childMask) const;
     
-    /**
+    /*
        @deprecated Use culledBy(Array<Plane>&)
      */
     bool culledBy(
@@ -85,7 +85,7 @@ public:
                   int32&              cullingPlaneIndex = dummy,
                   const uint32        testMask = 0xFFFFFFFF) const;
 
-    /**
+    /*
        See AABox::culledBy
     */
     bool culledBy(
@@ -94,7 +94,7 @@ public:
                   const uint32  			testMask,
                   uint32&                 childMask) const;
     
-    /**
+    /*
      Conservative culling test that does not produce a mask for children.
      */
     bool culledBy(
@@ -108,12 +108,12 @@ public:
 
     float area() const;
 
-    /**
+    /*
      Uniformly distributed on the surface.
      */
     Vector3 randomSurfacePoint() const;
 
-    /**
+    /*
      Uniformly distributed on the interior (includes surface)
      */
     Vector3 randomInteriorPoint() const;

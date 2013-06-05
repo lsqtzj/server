@@ -1,4 +1,4 @@
-/**
+/*
  @file Any.h
   
  @author Morgan McGuire, Shawn Yarbrough, and Corey Taylor

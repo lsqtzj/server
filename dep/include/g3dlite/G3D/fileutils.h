@@ -1,4 +1,4 @@
-/**
+/*
  @file fileutils.h
  
  @maintainer Morgan McGuire, http://graphics.cs.williams.edu
@@ -58,7 +58,7 @@ void zipRead(const std::string& file,
 void zipClose(void* data);
 
 
-/**
+/*
  @param flush If true (default), the file is ready for reading as soon
  as the function returns.  If false, the function returns immediately and
  writes the file in the background.
@@ -68,20 +68,20 @@ void writeWholeFile(
     const std::string& str, 
     bool    flush = true);
 
-/**
+/*
  Creates the directory (which may optionally end in a /)
  and any parents needed to reach it.
  */
 void createDirectory(
     const std::string&          dir);
 
-/**
+/*
  Fully qualifies a filename.  The filename may contain wildcards,
  in which case the wildcards will be preserved in the returned value.
  */
 std::string resolveFilename(const std::string& filename);
 
-/**
+/*
  Appends all files matching filespec to the files array.  The names
  will not contain paths unless includePath == true.  These may be
  relative to the current directory unless the filespec is fully qualified
@@ -96,7 +96,7 @@ void getFiles(
 	Array<std::string>&			files,
 	bool						includePath    = false);
 
-/**
+/*
  Appends all directories matching filespec to the files array. The names
  will not contain paths unless includePath == true.  These may be
  relative to the current directory unless the filespec is fully qualified
@@ -130,7 +130,7 @@ bool isZipfile(const std::string& filename);
 */
 int64 fileLength(const std::string& filename);
 
-/**
+/*
  Copies the file
  */
 void copyFile(
@@ -141,7 +141,7 @@ void copyFile(
     tries harder than the ANSI tmpfile, so it may succeed when that fails. */
 FILE* createTempFile();
 
-/**
+/*
  Returns true if the given file (or directory) exists.
 
  \param filename the path to test. must not end in a trailing slash.
@@ -160,7 +160,7 @@ bool fileExists
 /** Clears the cache used by fileExists */
 void clearFileSystemCache();
 
-/**
+/*
  Returns true if the given file (or directory) exists
  within a zipfile.  Called if fileExists initially
  returns false and the lookInZipfiles flag has been set.
@@ -179,7 +179,7 @@ bool zipfileExists
 
 bool zipfileExists(const std::string& filename);
 
-/**
+/*
   Parses a filename into four useful pieces.
 
   Examples:
@@ -211,13 +211,13 @@ void parseFilename(
     std::string&        ext);
 
 
-/**
+/*
  Returns the part of the filename that includes the base and ext from
  parseFilename (i.e. everything to the right of the path).
  */
 std::string filenameBaseExt(const std::string& filename);
 
-/**
+/*
  Returns the extension on a filename.
  */
 std::string filenameExt(const std::string& filename);

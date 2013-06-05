@@ -1,4 +1,4 @@
-/**
+/*
  @file stringutils.h
  
  @maintainer Morgan McGuire, http://graphics.cs.williams.edu
@@ -28,21 +28,21 @@ extern const char* NEWLINE;
 */
 void parseCommaSeparated(const std::string s, Array<std::string>& array, bool stripQuotes = true);
 
-/**
+/*
  Returns true if the test string begins with the pattern string.
  */
 bool beginsWith(
     const std::string&          test,
     const std::string&          pattern);
 
-/**
+/*
  Returns true if the test string ends with the pattern string.
  */
 bool endsWith(
     const std::string&          test,
     const std::string&          pattern);
 
-/**
+/*
  Produces a new string that is the input string
  wrapped at a certain number of columns (where
  the line is broken at the latest space before the
@@ -53,7 +53,7 @@ std::string wordWrap(
     const std::string&          input,
     int                         numCols);
 
-/**
+/*
  A comparison function for passing to Array::sort.
  */
 int stringCompare(
@@ -64,7 +64,7 @@ int stringPtrCompare(
     const std::string*          s1,
     const std::string*          s2);
 
-/**
+/*
  Returns a new string that is an uppercase version of x.
  */
 std::string toUpper(
@@ -73,14 +73,14 @@ std::string toUpper(
 std::string toLower(
     const std::string&          x);
 
-/**
+/*
  Splits x at each occurance of splitChar.
  */
 G3D::Array<std::string> stringSplit(
     const std::string&          x,
     char                        splitChar);
 
-/**
+/*
  joinChar is not inserted at the beginning or end, just in between
  elements.
  */
@@ -92,7 +92,7 @@ std::string stringJoin(
     const G3D::Array<std::string>&   a,
     const std::string&               joinStr);
 
-/**
+/*
  Strips whitespace from both ends of the string.
  */
 std::string trimWhitespace(

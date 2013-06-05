@@ -1,4 +1,4 @@
-/**
+/*
   @file AABox.h
  
   Axis-aligned box class
@@ -23,7 +23,7 @@
 
 namespace G3D {
 
-/**
+/*
  An axis-aligned box.
  */
 class AABox {
@@ -41,7 +41,7 @@ public:
     /** Does not initialize the fields */
     inline AABox() {}
 
-    /**
+    /*
      Constructs a zero-area AABox at v.
      */
     inline explicit AABox(const Vector3& v) {
@@ -67,7 +67,7 @@ public:
         hi = high;
     }
 
-    /**
+    /*
      Grows to include the bounds of a
      */
     inline void merge(const AABox& a) {
@@ -96,7 +96,7 @@ public:
         return hi;
     }
 
-    /**
+    /*
      The largest possible finite box.
      */
     static const AABox& maxFinite();
@@ -109,7 +109,7 @@ public:
 
     static const AABox& zero();
 
-    /**
+    /*
       Returns the centroid of the box.
      */
     inline Vector3 center() const {
@@ -118,7 +118,7 @@ public:
 
     Vector3 corner(int index) const;
 
-    /**
+    /*
      Distance from corner(0) to the next corner along axis a.
      */
     inline float extent(int a) const {
@@ -132,14 +132,14 @@ public:
     }
 
 
-    /**
+    /*
      Splits the box into two AABoxes along the specified axis.  low contains
      the part that was closer to negative infinity along axis, high contains
      the other part.  Either may have zero volume.
      */
     void split(const Vector3::Axis& axis, float location, AABox& low, AABox& high) const;
 
-	/**
+	/*
 	 Conservative culling test for up to 32 planes.	
 	 Returns true if there exists a <CODE>plane[p]</CODE> for
      which the entire object is in the negative half space
@@ -172,7 +172,7 @@ public:
 		const uint32  			testMask,
         uint32&                 childMask) const;
 
-    /**
+    /*
      Conservative culling test that does not produce a mask for children.
      */
 	bool culledBy(
